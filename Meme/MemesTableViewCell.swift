@@ -10,9 +10,13 @@ import UIKit
 
 class MemesTableViewCell: UITableViewCell {
 
+    //MARK: - IBOutlets
+    
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
+    
+    //MARK: - Variables
     
     static var cellIdentifier = "MemesTableViewCell"
     
@@ -22,6 +26,8 @@ class MemesTableViewCell: UITableViewCell {
         NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 30)!,
         NSStrokeWidthAttributeName : -3.0
     ]
+    
+    //MARK: - View Setup
     
     func setupCell(meme: Meme) {
         topLabel.attributedText = NSAttributedString(string: meme.topText, attributes: memeTextAttributes)
