@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MemesCollectionViewController: UIViewController {
+class MemesCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
@@ -17,23 +19,30 @@ class MemesCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New Meme", style: .Plain, target: self, action: #selector(MemesTableViewController.routeToAddMemeVC))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
     }
-    */
-
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return memes.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MemesCollectionViewCell.cellIdentifier, forIndexPath: indexPath) as! MemesCollectionViewCell
+        cell.setupCell(memes[indexPath.row])
+        return cell
+    }
+    
+    func routeToAddMemeVC() {
+        let addMemeVC = storyboard?.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
+        presentViewController(addMemeVC, animated: true, completion: nil)
+    }
 }

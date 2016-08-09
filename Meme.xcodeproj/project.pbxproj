@@ -17,6 +17,8 @@
 		944CDD2D1D58C77600DC6BD2 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944CDD2C1D58C77600DC6BD2 /* Launch.xib */; };
 		944CDD331D5A06F300DC6BD2 /* MemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CDD321D5A06F300DC6BD2 /* MemesTableViewController.swift */; };
 		944CDD351D5A070B00DC6BD2 /* MemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CDD341D5A070B00DC6BD2 /* MemesCollectionViewController.swift */; };
+		944CDD371D5A161100DC6BD2 /* MemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CDD361D5A161100DC6BD2 /* MemesCollectionViewCell.swift */; };
+		944CDD391D5A164F00DC6BD2 /* MemesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944CDD381D5A164F00DC6BD2 /* MemesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		944CDD2C1D58C77600DC6BD2 /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Launch.xib; sourceTree = "<group>"; };
 		944CDD321D5A06F300DC6BD2 /* MemesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesTableViewController.swift; sourceTree = "<group>"; };
 		944CDD341D5A070B00DC6BD2 /* MemesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesCollectionViewController.swift; sourceTree = "<group>"; };
+		944CDD361D5A161100DC6BD2 /* MemesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesCollectionViewCell.swift; sourceTree = "<group>"; };
+		944CDD381D5A164F00DC6BD2 /* MemesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				944CDCFC1D585D0300DC6BD2 /* MemeViewController.swift */,
 				944CDD321D5A06F300DC6BD2 /* MemesTableViewController.swift */,
 				944CDD341D5A070B00DC6BD2 /* MemesCollectionViewController.swift */,
+				944CDD361D5A161100DC6BD2 /* MemesCollectionViewCell.swift */,
+				944CDD381D5A164F00DC6BD2 /* MemesTableViewCell.swift */,
 				944CDCFE1D585D0300DC6BD2 /* Main.storyboard */,
 				944CDD011D585D0300DC6BD2 /* Assets.xcassets */,
 				944CDD061D585D0300DC6BD2 /* Info.plist */,
@@ -269,7 +275,9 @@
 				944CDCFD1D585D0300DC6BD2 /* MemeViewController.swift in Sources */,
 				944CDCFB1D585D0300DC6BD2 /* AppDelegate.swift in Sources */,
 				944CDD331D5A06F300DC6BD2 /* MemesTableViewController.swift in Sources */,
+				944CDD371D5A161100DC6BD2 /* MemesCollectionViewCell.swift in Sources */,
 				944CDD351D5A070B00DC6BD2 /* MemesCollectionViewController.swift in Sources */,
+				944CDD391D5A164F00DC6BD2 /* MemesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

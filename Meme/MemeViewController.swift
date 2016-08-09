@@ -81,6 +81,9 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
+    @IBAction func cancelNavButtonPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     //MARK: - Utilities
     
     func showActivityController() {
