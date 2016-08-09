@@ -29,8 +29,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         NSStrokeWidthAttributeName : -3.0
     ]
     
-    var memes = [Meme]()
-    
     //MARK: - View Lifecycle
     
     override func viewWillAppear(animated: Bool) {
@@ -96,7 +94,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             if completed {
                 let meme = Meme(topText: topText!, bottomText: bottomText!, originalImage: self.imagView.image!, memedImage: memedImage)
-                self.memes.append(meme)
+                (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
             }
         }
         
